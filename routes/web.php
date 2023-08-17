@@ -23,14 +23,21 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
-Route::middleware('auth')->group(function () {
+Route::middleware(['auth', 'role:admin'])->group(function () {
+    // Routes accessible only to admin role
     
     Route::resource('roles', RoleController::class);
     Route::resource('users', UserController::class);
 
+});
+
+Route::middleware(['auth', 'role:recruiter'])->group(function () {
+    // Routes accessible only to editor role
     
     Route::resource('products', ProductController::class);
+
 });
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
