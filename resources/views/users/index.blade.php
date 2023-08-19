@@ -1,10 +1,6 @@
 @extends('layouts.master')
 
-@if(!auth()->user()->hasRole('admin'))
-    <div class="alert alert-danger">
-        <p>This content is accessible only to administrators.</p>
-    </div>
-@else
+
 
 
 @section('content')
