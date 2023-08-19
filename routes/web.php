@@ -15,7 +15,7 @@ use App\Http\Controllers\ProductController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/', function () {
+Route::any('/', function () {
     return view('welcome');
 })->name('welcome');
 
