@@ -6,7 +6,7 @@
             <a href="{{ route('roles.index') }}">Roles management</a> <br>
             <a href="{{ route('products.index') }}">Jobs management</a>
         @endrole
-        @role('user')
+        @role('recruiter')
             <a href="{{ route('products.index') }}">Jobs management</a>
         @endrole
     </h2>
