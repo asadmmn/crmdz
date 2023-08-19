@@ -16,7 +16,7 @@ use App\Http\Controllers\ProductController;
 |
 */
 
-Route::match(['get', 'post'], '/welcome', function () {
+Route::match(['get', 'post'], '/', function () {
     return view('welcome');
 })->name('welcome');
 
