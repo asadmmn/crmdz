@@ -29,16 +29,14 @@ Route::middleware(['auth', 'role:Admin'])->group(function () {
     Route::resource('roles', RoleController::class);
     Route::resource('users', UserController::class);
 
-    Route::resource('products', ProductController::class);
-
 });
 
-Route::middleware(['auth', 'role:recruiter'])->group(function () {
-    // Routes accessible only to editor role
+// Route::middleware(['auth', 'role:recruiter'])->group(function () {
+//     // Routes accessible only to editor role
     
     Route::resource('products', ProductController::class);
 
-});
+// });
 
 
 Route::middleware('auth')->group(function () {
