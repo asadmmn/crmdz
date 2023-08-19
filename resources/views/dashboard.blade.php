@@ -1,12 +1,11 @@
 <x-app-layout>
 <x-slot name="header">
     <h2 class="font-semibold text-xl bg-white text-gray-800 leading-tight">
-        @role('admin')
+        
             <a href="{{ route('users.index') }}">Users management</a> <br>
             <a href="{{ route('roles.index') }}">Roles management</a> <br>
             <a href="{{ route('products.index') }}">Jobs management</a>
-        @endrole
-        @role('recruiter')
+                @role('recruiter')
             <a href="{{ route('products.index') }}">Jobs management</a>
         @endrole
     </h2>
