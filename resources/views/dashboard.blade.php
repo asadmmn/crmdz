@@ -5,9 +5,7 @@
             <a href="{{ route('users.index') }}">Users management</a> <br>
             <a href="{{ route('roles.index') }}">Roles management</a> <br>
             <a href="{{ route('products.index') }}">Jobs management</a>
-                @role('recruiter')
-            <a href="{{ route('products.index') }}">Jobs management</a>
-        @endrole
+                
     </h2>
 </x-slot>
 
