@@ -30,8 +30,10 @@
                             <li><a class="nav-link" href="{{ route('login') }}">{{ ('Login') }} </a></li>
                             <li><a class="nav-link" href="{{ route('register') }}">{{ ('Register') }}</a></li>
                         @else
+                        @role('Admin')
                             <li><a class="nav-link" href="{{ route('users.index') }}">Manage Users</a></li>
                             <li><a class="nav-link" href="{{ route('roles.index') }}">Manage Role</a></li>
+                            @endrole
                             <li><a class="nav-link" href="{{ route('products.index') }}">Manage jobs</a></li>
                             <li class="ms-3 nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
