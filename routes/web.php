@@ -20,7 +20,7 @@ Route::get('/wel', function () {
 })->name('welcome');
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('users.index');
 })->middleware(['auth', 'verified'])->name('dashboard');
 Route::middleware(['auth', 'role:Admin'])->group(function () {
     // Routes accessible only to admin role
