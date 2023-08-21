@@ -23,14 +23,14 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
      -->
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto">
-                       
+                        -->
                             @include('layouts.navigation')
- 
+<!--  
                     </ul>
                 </div>
-            </div>
+            </div> -->
         </nav>
 
         <main class="py-4 bg-light">
