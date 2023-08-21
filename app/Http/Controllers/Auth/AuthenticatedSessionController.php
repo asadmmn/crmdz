@@ -32,10 +32,9 @@ class AuthenticatedSessionController extends Controller
         if (role('user')) {
             return redirect()->route('candidates.create');
         } else {
-            return redirect()->intended(RouteServiceProvider::HOME);
-   
+            return redirect()->route('products.index');
         }
-    }
+        }
 
     /**
      * Destroy an authenticated session.
