@@ -39,7 +39,10 @@ class RegisteredUserController extends Controller
         event(new Registered($user));
 
         Auth::login($user);
-
-        return redirect(RouteServiceProvider::HOME);
+        if ($user->hasRole('user')) {
+            return redirect()->route('candidates.create');
+        } else {
+            return redirect()->route('products.index');
+        }
     }
 }
