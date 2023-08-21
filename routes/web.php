@@ -31,7 +31,7 @@ Route::middleware(['auth', 'role:Admin'])->group(function () {
     Route::resource('users', UserController::class);
 
 });
-Route::middleware(['auth', 'role:recruiter|Admin'])->group(function () {    // Routes accessible only to editor role
+Route::middleware(['auth', 'role:recruiter|Admin|user'])->group(function () {    // Routes accessible only to editor role
     
     Route::resource('products', ProductController::class);
 
