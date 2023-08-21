@@ -28,9 +28,11 @@ class AuthenticatedSessionController extends Controller
         $request->authenticate();
 
         $request->session()->regenerate();
-
-        return redirect()->route('products.index');
-   
+        if (role('user')) {
+            return redirect()->route('candidates.create');
+        } else {
+            return redirect()->route('products.index');
+        }
        // return redirect()->intended(RouteServiceProvider::HOME);
     }
 

@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CandidateController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -37,6 +39,9 @@ Route::middleware(['auth', 'role:recruiter|Admin'])->group(function () {    // R
 
 Route::get('/dash', [ProductController::class, 'index']);
 
+
+Route::get('/candidates/create', [CandidateController::class, 'create'])->name('candidates.create');
+Route::post('/candidates/store', [CandidateController::class, 'store'])->name('candidates.store');
 
 
 Route::middleware('auth')->group(function () {
