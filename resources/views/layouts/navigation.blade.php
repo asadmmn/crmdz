@@ -12,8 +12,8 @@
 
                 <!-- Navigation Links -->
                 <div class="space-x-8 sm:-my-px sm:ml-10 text-dark sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('CodeZEro-CRM') }}</x-nav-link>
+                    <nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                        {{ __('CodeZEro-CRM') }}</nav-link>
                 @role('Admin')
                 <x-nav-link  class="nav-link" href="{{ route('users.index') }}">Manage Users</a></li>
                 </x-nav-link><x-nav-link  class="nav-link" href="{{ route('roles.index') }}">Manage Role</a></li>
