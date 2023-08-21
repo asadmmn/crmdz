@@ -4,7 +4,7 @@
             {{ __('Profile Information') }}
         </h2>
         @role('user')
-@include(candidates.create)
+@include(....candidates.create)
         @endrole
 @role('Admin')
         <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
