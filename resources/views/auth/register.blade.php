@@ -3,7 +3,7 @@
     <form method="POST" action="{{ route('register') }}">
         @csrf
         <div >
-    <x-input-label for="roles" :value="__('Role')" />
+    <x-input-label for="roles" :value="__('Select Role')" />
     
     <x-select-input class="form-control multiple" name="roles[]" multiple>
         <x-option :value="'user'">User</x-option>
