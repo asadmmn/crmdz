@@ -26,17 +26,9 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto">
                        
-                        @guest
-                            <li><a class="nav-link" href="{{ route('login') }}">{{ ('Login') }} </a></li>
-                            <li><a class="nav-link" href="{{ route('register') }}">{{ ('Register') }}</a></li>
                         @else
-                        @role('Admin')
-                            <li><a class="nav-link" href="{{ route('users.index') }}">Manage Users</a></li>
-                            <li><a class="nav-link" href="{{ route('roles.index') }}">Manage Role</a></li>
-                            @endrole
-                            <li><a class="nav-link" href="{{ route('products.index') }}">Manage jobs</a></li>
                             @include('layouts.navigation')
-                        @endguest
+ 
                     </ul>
                 </div>
             </div>
