@@ -2,12 +2,13 @@
 
     <form method="POST" action="{{ route('register') }}">
         @csrf
-        <div class="form-group">
-    <strong>Role:</strong>
-    <select class="form-control multiple" multiple name="roles[]">
-        <option value="user">user</option>
-        <option value="recruiter">recruiter</option>
-    </select>
+        <div >
+    <x-input-label for="roles" :value="__('Role')" />
+    
+    <x-select-input class="form-control multiple" name="roles[]" multiple>
+        <x-option :value="'user'">User</x-option>
+        <x-option :value="'recruiter'">Recruiter</x-option>
+    </x-select-input>
 </div>
 
         <div>
