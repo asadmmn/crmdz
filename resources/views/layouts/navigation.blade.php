@@ -21,8 +21,8 @@
 
                 @role('Admin,recruiter')
                             <x-nav-link  class="nav-link" href="{{ route('products.index') }}">Manage jobs</a></li>
-                            </x-nav-link
-                            @endrole>
+                            </x-nav-link>
+                            @endrole
                 </div>
                
                         </div>
