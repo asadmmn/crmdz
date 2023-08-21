@@ -11,17 +11,15 @@
                 </div>
 
                 <!-- Navigation Links -->
-                <div class="space-x-8  mt-5 sm:-my-px sm:ml-10 text-dark sm:flex">
-                    <nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('CodeZEro-CRM') }}</nav-link>
+                <div class="space-x-8 sm:-my-px sm:ml-10 text-dark sm:flex">
+                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                        {{ __('CodeZEro-CRM') }}</x-nav-link>
                 @role('Admin')
-                <nav-link  class="nav-link" href="{{ route('users.index') }}">Manage Users</a></li>
-                </nav-link>
-                <nav-link  class="nav-link" href="{{ route('roles.index') }}">Manage Role</a></li>
-                </nav-link>
-                @endrole
-                            <nav-link  class="nav-link" href="{{ route('products.index') }}">Manage jobs</a></li>
-                            </nav-link>
+                <x-nav-link  class="nav-link" href="{{ route('users.index') }}">Manage Users</a></li>
+                </x-nav-link><x-nav-link  class="nav-link" href="{{ route('roles.index') }}">Manage Role</a></li>
+                </x-nav-link>@endrole
+                            <x-nav-link  class="nav-link" href="{{ route('products.index') }}">Manage jobs</a></li>
+                            </x-nav-link>
                 </div>
                
                         </div>
