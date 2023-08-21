@@ -16,6 +16,12 @@
                         {{ __('CodeZEro-CRM') }}
                     </x-nav-link>
                 </div>
+                @role('Admin')
+                            <li><a class="nav-link" href="{{ route('users.index') }}">Manage Users</a></li>
+                            <li><a class="nav-link" href="{{ route('roles.index') }}">Manage Role</a></li>
+                            @endrole
+                            <li><a class="nav-link" href="{{ route('products.index') }}">Manage jobs</a></li>
+ s
             </div>
 
             <!-- Settings Dropdown -->
