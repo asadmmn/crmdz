@@ -8,25 +8,25 @@
     <form action="{{ route('candidates.update') }}" method="POST" enctype="multipart/form-data" class="space-y-4">
     @csrf
 
-    <x-input label="Full Name" name="full_name" />
+    <x-text-input label="Full Name" name="full_name" />
     <x-input label="Picture" name="picture" type="file" />
     <x-input label="Email" name="email" type="email" />
     <x-input label="Resume" name="resume" type="file" />
-    <x-input label="Phone Number" name="phone_number" />
+    <x-text-input label="Phone Number" name="phone_number" />
     
     <x-select label="Gender" name="gender">
         <option value="male">Male</option>
         <option value="female">Female</option>
     </x-select>
     
-    <x-input label="Birth Date" name="birth_date" type="date" />
-    <x-input label="Address" name="address" />
-    <x-input label="Zipcode" name="zipcode" />
-    <x-input label="Latest Degree" name="latest_degree" />
-    <x-input label="Latest University" name="latest_university" />
-    <x-input label="Current Company" name="current_company" />
-    <x-input label="Current Department" name="current_department" />
-    <x-input label="Current Position" name="current_position" />
+    <x-text-input label="Birth Date" name="birth_date" type="date" />
+    <x-text-input label="Address" name="address" />
+    <x-text-input label="Zipcode" name="zipcode" />
+    <x-text-input label="Latest Degree" name="latest_degree" />
+    <x-text-input label="Latest University" name="latest_university" />
+    <x-text-input label="Current Company" name="current_company" />
+    <x-text-input label="Current Department" name="current_department" />
+    <x-text-input label="Current Position" name="current_position" />
     
     <x-textarea label="Description" name="description" />
 
