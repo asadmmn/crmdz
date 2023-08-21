@@ -8,24 +8,24 @@
         <form action="{{ route('candidates.update') }}" method="POST" enctype="multipart/form-data" class="space-y-4">
             @csrf
 
-            <x-form-group label="Full Name" name="full_name" />
-            <x-form-group label="Picture" name="picture" type="file" />
-            <x-form-group label="Email" name="email" type="email" />
-            <x-form-group label="Resume" name="resume" type="file" />
-            <x-form-group label="Phone Number" name="phone_number" />
-            <x-form-group label="Gender" name="gender" type="select">
+            <x-input-label for="Full Name" name="full_name" />
+            <x-input-label for="Picture" name="picture" type="file" />
+            <x-input-label for="Email" name="email" type="email" />
+            <x-input-label for="Resume" name="resume" type="file" />
+            <x-input-label for="Phone Number" name="phone_number" />
+            <x-input-label for="Gender" name="gender" type="select">
                 <option value="male">Male</option>
                 <option value="female">Female</option>
-            </x-form-group>
-            <x-form-group label="Birth Date" name="birth_date" type="date" />
-            <x-form-group label="Address" name="address" />
-            <x-form-group label="Zipcode" name="zipcode" />
-            <x-form-group label="Latest Degree" name="latest_degree" />
-            <x-form-group label="Latest University" name="latest_university" />
-            <x-form-group label="Current Company" name="current_company" />
-            <x-form-group label="Current Department" name="current_department" />
-            <x-form-group label="Current Position" name="current_position" />
-            <x-form-group label="Description" name="description" type="textarea" />
+            </x-input-label>
+            <x-input-label for="Birth Date" name="birth_date" type="date" />
+            <x-input-label for="Address" name="address" />
+            <x-input-label for="Zipcode" name="zipcode" />
+            <x-input-label for="Latest Degree" name="latest_degree" />
+            <x-input-label for="Latest University" name="latest_university" />
+            <x-input-label for="Current Company" name="current_company" />
+            <x-input-label for="Current Department" name="current_department" />
+            <x-input-label for="Current Position" name="current_position" />
+            <x-input-label for="Description" name="description" type="textarea" />
 
             <button type="submit" class="btn btn-primary">{{ __('Create Candidate') }}</button>
         </form>
