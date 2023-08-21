@@ -16,8 +16,10 @@
                         {{ __('CodeZEro-CRM') }}</nav-link>
                 @role('Admin')
                 <nav-link  class="nav-link" href="{{ route('users.index') }}">Manage Users</a></li>
-                </nav-link><x-nav-link  class="nav-link" href="{{ route('roles.index') }}">Manage Role</a></li>
-                </nav-link>@endrole
+                </nav-link>
+                <nav-link  class="nav-link" href="{{ route('roles.index') }}">Manage Role</a></li>
+                </nav-link>
+                @endrole
                             <nav-link  class="nav-link" href="{{ route('products.index') }}">Manage jobs</a></li>
                             </nav-link>
                 </div>
