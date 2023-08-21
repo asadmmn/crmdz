@@ -4,92 +4,34 @@
             {{ __('Profile Information') }}
         </h2>
         @role('user')
-        <div class="container">
-        <form action="{{ route('candidates.update') }}" method="POST" enctype="multipart/form-data">
+    <div class="container">
+        <form action="{{ route('candidates.update') }}" method="POST" enctype="multipart/form-data" class="space-y-4">
             @csrf
 
-            <div class="form-group">
-                <label for="full_name">Full Name</label>
-                <input type="text" name="full_name" class="form-control">
-            </div>
-            
-            <div class="form-group">
-                <label for="picture">Picture</label>
-                <input type="file" name="picture" class="form-control-file">
-            </div>
-            
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" name="email" class="form-control">
-            </div>
-            
-            <div class="form-group">
-                <label for="resume">Resume</label>
-                <input type="file" name="resume" class="form-control-file">
-            </div>
-            
-            <div class="form-group">
-                <label for="phone_number">Phone Number</label>
-                <input type="text" name="phone_number" class="form-control">
-            </div>
-            
-            <div class="form-group">
-                <label for="gender">Gender</label>
-                <select name="gender" class="form-control">
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                </select>
-            </div>
-            
-            <div class="form-group">
-                <label for="birth_date">Birth Date</label>
-                <input type="date" name="birth_date" class="form-control">
-            </div>
-            
-            <div class="form-group">
-                <label for="address">Address</label>
-                <input type="text" name="address" class="form-control">
-            </div>
-            
-            <div class="form-group">
-                <label for="zipcode">Zipcode</label>
-                <input type="text" name="zipcode" class="form-control">
-            </div>
-            
-            <div class="form-group">
-                <label for="latest_degree">Latest Degree</label>
-                <input type="text" name="latest_degree" class="form-control">
-            </div>
-            
-            <div class="form-group">
-                <label for="latest_university">Latest University</label>
-                <input type="text" name="latest_university" class="form-control">
-            </div>
-            
-            <div class="form-group">
-                <label for="current_company">Current Company</label>
-                <input type="text" name="current_company" class="form-control">
-            </div>
-            
-            <div class="form-group">
-                <label for="current_department">Current Department</label>
-                <input type="text" name="current_department" class="form-control">
-            </div>
-            
-            <div class="form-group">
-                <label for="current_position">Current Position</label>
-                <input type="text" name="current_position" class="form-control">
-            </div>
-            
-            <div class="form-group">
-                <label for="description">Description</label>
-                <textarea name="description" class="form-control"></textarea>
-            </div>
+            <x-form-group label="Full Name" name="full_name" />
+            <x-form-group label="Picture" name="picture" type="file" />
+            <x-form-group label="Email" name="email" type="email" />
+            <x-form-group label="Resume" name="resume" type="file" />
+            <x-form-group label="Phone Number" name="phone_number" />
+            <x-form-group label="Gender" name="gender" type="select">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </x-form-group>
+            <x-form-group label="Birth Date" name="birth_date" type="date" />
+            <x-form-group label="Address" name="address" />
+            <x-form-group label="Zipcode" name="zipcode" />
+            <x-form-group label="Latest Degree" name="latest_degree" />
+            <x-form-group label="Latest University" name="latest_university" />
+            <x-form-group label="Current Company" name="current_company" />
+            <x-form-group label="Current Department" name="current_department" />
+            <x-form-group label="Current Position" name="current_position" />
+            <x-form-group label="Description" name="description" type="textarea" />
 
-            <button type="submit" class="btn btn-primary">Create Candidate</button>
+            <button type="submit" class="btn btn-primary">{{ __('Create Candidate') }}</button>
         </form>
     </div>
-        @endrole
+    @endrole
+
 @role('Admin')
         <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
             {{ __("Update your account's profile information and email address.") }}
