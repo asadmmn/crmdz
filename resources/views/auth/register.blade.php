@@ -1,8 +1,15 @@
 <x-guest-layout>
+
     <form method="POST" action="{{ route('register') }}">
         @csrf
+        <div class="form-group">
+    <strong>Role:</strong>
+    <select class="form-control multiple" multiple name="roles[]">
+        <option value="user">user</option>
+        <option value="recruiter">recruiter</option>
+    </select>
+</div>
 
-        <!-- Name -->
         <div>
             <x-input-label for="name" :value="__('Name')" />
             <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
