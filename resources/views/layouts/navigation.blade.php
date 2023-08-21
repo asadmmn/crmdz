@@ -13,12 +13,12 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 text-dark sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('CodeZEro-CRM') }}
+                        {{ __('CodeZEro-CRM') }}</x-nav-link>
                 @role('Admin')
-                            <li><a class="nav-link" href="{{ route('users.index') }}">Manage Users</a></li>
-                            <li><a class="nav-link" href="{{ route('roles.index') }}">Manage Role</a></li>
-                            @endrole
-                            <li><a class="nav-link" href="{{ route('products.index') }}">Manage jobs</a></li>
+                <x-nav-link  class="nav-link" href="{{ route('users.index') }}">Manage Users</a></li>
+                </x-nav-link><x-nav-link  class="nav-link" href="{{ route('roles.index') }}">Manage Role</a></li>
+                </x-nav-link>@endrole
+                            <x-nav-link  class="nav-link" href="{{ route('products.index') }}">Manage jobs</a></li>
                             </x-nav-link>
                 </div>
                
