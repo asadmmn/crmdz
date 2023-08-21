@@ -35,6 +35,9 @@ Route::middleware(['auth', 'role:recruiter|Admin'])->group(function () {    // R
 
 });
 
+Route::get('/dash', [ProductController::class, 'index']);
+
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
