@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb mb-4">
             <div class="pull-left">
-                <h2>Products                  
+                <h2>Jobs                  
             <div class="float-end">
               @can('product-create')
               <a class="btn btn-success" href="{{ route('products.create') }}"> Create New job</a>
@@ -36,6 +36,7 @@
          <td>
                 <form action="{{ route('products.destroy',$product->id) }}" method="POST">
                     <a class="btn btn-info" href="{{ route('products.show',$product->id) }}">Show</a>
+                    <a class="btn btn-danger" href="{{ route('products.show',$product->id) }}">Apply</a>
                     @can('product-edit')
                     <a class="btn btn-primary" href="{{ route('products.edit',$product->id) }}">Edit</a>
                     @endcan
