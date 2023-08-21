@@ -14,15 +14,15 @@
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 text-dark sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('CodeZEro-CRM') }}
-                    </x-nav-link>
-                </div>
                 @role('Admin')
                             <li><a class="nav-link" href="{{ route('users.index') }}">Manage Users</a></li>
                             <li><a class="nav-link" href="{{ route('roles.index') }}">Manage Role</a></li>
                             @endrole
                             <li><a class="nav-link" href="{{ route('products.index') }}">Manage jobs</a></li>
- s
-            </div>
+                            </x-nav-link>
+                </div>
+               
+                        </div>
 
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ml-6">
