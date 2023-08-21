@@ -36,4 +36,23 @@ class CandidateController extends Controller
 
         return redirect()->route('products.index');
     }
+    
+    public function update(Request $request, Product $product)
+    {
+        request()->validate([
+            'full_name' => 'required|string|max:255',
+            'picture' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'email' => 'required|email|max:255',
+            'resume' => 'nullable|file|mimes:pdf,doc,docx|max:2048',
+            'phone_number' => 'nullable|string|max:255',
+            'gender' => 'nullable|string|max:255',
+         
+        ]);
+
+        Candidate::update($request->all());
+
+        return redirect()->route('products.index')
+            ->with('success', 'Profile updated successfully');
+    }
+
 }

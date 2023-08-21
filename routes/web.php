@@ -42,6 +42,7 @@ Route::get('/dash', [ProductController::class, 'index']);
 
 Route::get('/candidates/create', [CandidateController::class, 'create'])->name('candidates.create');
 Route::post('/candidates/store', [CandidateController::class, 'store'])->name('candidates.store');
+Route::post('/candidates/store', [CandidateController::class, 'store'])->name('candidates.update');
 
 
 Route::middleware('auth')->group(function () {
