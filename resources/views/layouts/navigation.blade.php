@@ -19,7 +19,8 @@
                 </x-nav-link><x-nav-link  class="nav-link" href="{{ route('roles.index') }}">Manage Role</a></li>
                 </x-nav-link>@endrole
 
-                @role('Admin,recruiter')
+                @role('Admin|recruiter')
+
                             <x-nav-link  class="nav-link" href="{{ route('products.index') }}">Manage jobs</a></li>
                             </x-nav-link>
                             @endrole
