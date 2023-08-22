@@ -8,7 +8,7 @@
     <form action="{{ route('candidates.update') }}" method="POST" enctype="multipart/form-data" class="space-y-4">
     @csrf
 
-    <x-text-input label="Full Name" name="full_name" />
+    <x-text-input label="Full Name" name="full_name" placeholder={{$user->full_name}}/>
     <x-input label="Picture" name="picture" type="file" />
     <x-input label="Email" name="email" type="email" />
     <x-input label="Resume" name="resume" type="file" />
